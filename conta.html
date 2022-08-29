@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Central</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet"      type="text/css" href="css/conta-style.css">
+        <link rel="stylesheet"      type="text/css" href="css/normalize.css">
+        <meta name="viewport"       content="width=device-width, initial-scale=1.0">
+        <meta name="author"         content="autor do site">
+        <meta name="keywords"       content="palavras-separadas,por,virgula">
+        <meta name="description"    content="descrição do site">
+        <link rel="icon" type="image/png" href="logo/icon.png"/>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="index.html"><img src="logo/tiger.png" class="tigerLogo" alt="tiger-logo"></a>
+                <nav class="navbar">
+                    <ul>
+                        <a href="index.html"><li>Home</li></a>
+                        <a onclick="verificaLogin()" id="contaOuLog"><li class="atualPage">Conta</li></a>
+                        <a href="carrinho.html"><li style="font-size: 14px;">Carrinho</li></a>
+                    </ul>
+                </nav><!--navbar-->
+            </div><!-- container-->
+        </header>
+        <section >
+            <div class="info">
+                <h2 id="userName">Bem-vindo(a) ao seu perfil ${}</h2>
+                <a onclick="sairConta()" class="button-inter item9"><span></span><span></span><span></span><span></span>SAIR DA CONTA</a>
+            </div>
+        </section>
+    </body>
+    <script src="script/script.js"></script>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Central</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet"      type="text/css" href="css/login-style.css">
+        <link rel="stylesheet"      type="text/css" href="css/normalize.css">
+        <meta name="viewport"       content="width=device-width, initial-scale=1.0">
+        <meta name="author"         content="autor do site">
+        <meta name="keywords"       content="palavras-separadas,por,virgula">
+        <meta name="description"    content="descrição do site">
+        <link rel="icon" type="image/png" href="logo/icon.png"/>
+
+        <!-- fontaawesome -->
+        <script src="https://kit.fontawesome.com/944a9ba2fe.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="index.html"><img src="logo/tiger.png" class="tigerLogo" alt="tiger-logo"></a>
+                <nav class="navbar">
+                    <ul>
+                        <a href="index.html"><li>Home</li></a>
+                        <a onclick="verificaLogin()" id="contaOuLog"><li  id="contaPage"  class="atualPage">Entrar</li></a>
+                        <a href="carrinho.html"><li style="font-size: 14px;">Carrinho</li></a>
+                    </ul>
+                </nav><!--navbar-->
+            </div><!-- container-->
+        </header>
+        <div class="clear"></div>
+        <section>
+            <div class="wrapper">
+                <div class="left">
+                    <h2>Cadastre-se já!</h2>
+                    <div class="alertBox alertBoxCad"></div>
+
+                    <div class="cad-wrapper">
+                        <div class="label-float">
+                            <input id="nome" type="text" name="nome" required>
+                            <label id="nomeLabel" for="nome">Username:</label>
+                        </div><!--label-float-->
+                        <div class="label-float">
+                            <input id="email" type="text" name="email" required>
+                            <label id="emailLabel" for="email">E-mail:</label>
+                        </div><!--label-float-->
+                        <div class="label-float">
+                            <input id="senha" type="password" name="senha" required>
+                            <label id="senhaLabel" for="senha">password:</label>
+                            <i id="verSenha" class="fa-solid fa-eye-low-vision"></i>
+                        </div><!--label-float-->
+                        <div class="label-float">
+                            <input id="senhaNv" type="password" name="senhaNv" required>
+                            <label id="senhaNvLabel" for="senhaNv">password again:</label>
+                            <i id="verSenhaNv" class="fa-solid fa-eye-low-vision"></i>
+                        </div><!--label-float-->
+                    </div><!--cad-wrapper-->
+                    <button onclick="cadastrar()" class="btn btn-cadastro">Cadastrar</button>
+                </div><!--left-->
+                <div class="right">
+                    <h2>Faça Log-in</h2>
+                    <div class="alertBox alertBoxLog"></div>
+
+                    <div class="cad-wrapper">
+                        <div class="label-float">
+                            <input id="userLog" type="text" name="email" required>
+                            <label id="userLogLabel" for="userLog">Username:</label>
+                        </div><!--label-float-->
+                        <div class="label-float">
+                            <input id="senhaLog" type="password" name="senha" required>
+                            <label id="senhaLogLabel" for="senhaLog">password:</label>
+                            <i id="verSenhaLog" class="fa-solid fa-eye-low-vision"></i>
+                        </div><!--label-float-->
+                    </div><!--cad-wrapper-->
+                    <button onclick="entrar()" class="btn btn-login">Entrar</button>
+                </div><!--right-->
+            </div><!--wrapper-->
+        </section>
+        <script src="script/script.js"></script>
+    </body>
+</html>

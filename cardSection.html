@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Central</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet"      type="text/css" href="css/cardSection-style.css">
+        <link rel="stylesheet"      type="text/css" href="css/normalize.css">
+        <meta name="viewport"       content="width=device-width, initial-scale=1.0">
+        <meta name="author"         content="autor do site">
+        <meta name="keywords"       content="palavras-separadas,por,virgula">
+        <meta name="description"    content="descrição do site">
+        <link rel="icon" type="image/png" href="logo/icon.png"/>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="index.html"><img src="logo/tiger.png" class="tigerLogo" alt="tiger-logo"></a>
+                <nav class="navbar">
+                    <ul>
+                        <a href="index.html"><li>Home</li></a>
+                        <a onclick="verificaLogin()" id="contaOuLog" ><li id="contaPage" >Entrar</li></a>
+                        <a href="carrinho.html"><li style="font-size: 14px;">Carrinho</li></a>
+                    </ul>
+                </nav><!--navbar-->
+            </div><!-- container-->
+        </header>
+        <section>
+            <div class="container">
+                <div class="wrapper">
+                    <div class="card">
+                        <div style="background-image: url('game/lol.jpg');" class="card-icon"></div>
+                    </div>
+                    
+                    <div class="info">
+                        <div class="descricao">
+                            <span>Nome: <span id="produtoNome">League of legends</span></span>
+
+                            <span>Descrição:</span>
+                            <p id="descricao">League of Legends é um jogo em equipes com mais de 140 Campeões com os quais você pode fazer jogadas insanas. Jogue agora, é grátis!</p>
+                            <br/>
+                            <div class="comprar">
+                                <div class="descValor">
+                                    <span>Preço/hr:</span>
+                                    <p>R$ <span id="valor">02,00</span></p>
+                                </div>
+                                <div>
+                                    <button>Adicionar carrinho</button>
+                                </div>
+                            </div><!--comprar-->
+                        </div><!--descrição-->
+                    </div><!--info-->
+                </div><!---->
+            </div><!--container-->
+        </section>
+        <!-- Script Geral -->
+        <script src="script/script.js"></script>
+
+        <!-- Script Card -->
+        <script src="script/card.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelector(".card"), {
+                max: 12, speed: 10000, glare: true, 'max-glare': 0.4});
+            VanillaTilt.init(document.querySelectorAll(".card"), {
+                max: 12 , speed: 10000, glare: true, 'max-glare': 0.4});
+        </script>
+    </body>
+</html>

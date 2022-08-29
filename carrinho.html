@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Central</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet"      type="text/css" href="css/carrinho-style.css">
+        <link rel="stylesheet"      type="text/css" href="css/normalize.css">
+        <meta name="viewport"       content="width=device-width, initial-scale=1.0">
+        <meta name="author"         content="autor do site">
+        <meta name="keywords"       content="palavras-separadas,por,virgula">
+        <meta name="description"    content="descrição do site">
+        <link rel="icon" type="image/png" href="logo/icon.png"/>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="index.html"><img src="logo/tiger.png" class="tigerLogo" alt="tiger-logo"></a>
+                <nav class="navbar">
+                    <ul>
+                        <a href="index.html"><li>Home</li></a>
+                        <a onclick="verificaLogin()" id="contaOuLog"><li id="contaPage" >Entrar</li></a>
+                        <a href="#"><li class="atualPage" style="font-size: 14px;">Carrinho</li></a>
+                    </ul>
+                </nav><!--navbar-->
+            </div><!-- container-->
+        </header>
+        <section id="carrinho">
+            <div class="container">
+                <div class="wrapper">
+                    <h2>Carrinho</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket2-fill" viewBox="0 0 16 16">
+                        <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z"/>
+                      </svg>
+                    <div class="carrinho">
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Qtd horas</th>
+                                    <th>Preço (hora)</th>
+                                    <th>Desconto</i></th>
+                                    <th>Valor Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>tag</td>
+                                    <td>tempo</td>
+                                    <td>valor base</td>
+                                    <td>xyz</td>
+                                    <td>$$$</td>
+                                </tr>
+                                <tr>
+                                    <td>tag</td>
+                                    <td>tempo</td>
+                                    <td>valor base</td>
+                                    <td>xyz</td>
+                                    <td>$$$</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!--carrinho-->
+                </div><!--wrapper-->
+            </div><!--container-->
+        </section>
+        <script src="script/script.js"></script>
+    </body>
+</html>

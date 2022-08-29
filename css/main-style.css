@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    list-style-type: none;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    background-image: url(../logo/background2.png);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1080px;
+    position: relative;
+}
+
+
+/*** Navbar ***/
+header{
+    width: 100%;
+    height: 45px;
+    background-color: #181c22;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.678);
+}
+
+header .tigerLogo{
+    width: 75px;
+    top: 13px;
+    left: calc(50% + 8px);
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+header .navbar {
+    top: 0;
+    right: 17px;
+    position: absolute;
+}
+
+header .navbar a{ color: rgb(78, 78, 78); }
+header .navbar a:hover{ color: rgb(129, 129, 129);}
+
+header .navbar li{
+    float: left;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 15px;
+    line-height: 45px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a#contaOuLog{
+    cursor: pointer;
+}
+
+li.atualPage{
+    height: 45px;
+    color: rgb(146 146 146) !important;
+    background-color: rgb(38, 43, 53);
+}
+
+header .navbar li img{
+    width: 25px;
+    top: 4px;
+    left: 0px;
+    position: relative;
+}
+
+div.central{
+    text-align: center;
+    
+}
+
+div.central img{
+    max-width: 800px;
+    width: 62%;
+}
+
+section{
+    position: relative;
+    top: -130px;
+}
+
+
+/*** Conteúdo ***/
+#GameList{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 70px;
+    left: 0;
+    justify-content: space-around;
+}
+
+.card{
+    cursor: pointer;
+    font-size: 1.1em;
+    display: block;
+    flex-direction: column;
+    position: relative;
+    width: 220px;
+    height: 340px;
+    margin: 30px 6px;
+    border-radius: 0;
+    box-shadow: 0px 0px 50px black;
+    border: 3px solid rgb(112, 112, 112);
+    transition: all .5s ease-out;
+}
+
+.card:hover .card2{
+    animation: card2Animation 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.card2{
+    color: greenyellow;
+    padding: 0 15px;
+    line-height: 40px;
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    right: -11px;
+    bottom: 15px;
+    z-index: -1;
+    width: auto;
+    height: 40px;
+    margin: 30px 6px;
+    border-radius: 0;
+    box-shadow: 0px 0px 50px black;
+    background-color: hsl(115, 89%, 22%);
+    transition: all 0.5s ease-out;
+}
+
+@keyframes card2Animation{
+    0%{
+        right: -11px;
+        z-index: -1;
+    }
+    45%{
+        z-index: -1;
+    }
+    75%{
+
+        right: -90px;
+        z-index: 99;
+    }
+    100%{
+        width: auto;
+        right: -11px;
+        z-index: 99;
+    }
+}
+
+.card a{ text-decoration: none; }
+
+.cardDestaque{
+    width: 460px;
+}
+
+.card-icon {
+    height: 83%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.buyButton{
+    width: 100%;
+    height: 17%;
+    color: rgb(112, 112, 112);
+    line-height: 50px;
+    text-align: center;
+    font-size: 0.8em;
+    background-color: #0d0f11;
+}
+
+
+
+/* Garra Animation */
+.garraX{ opacity: 0.9;}
+.card:hover .garraX{
+    position: absolute;
+    top: -80px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+
+    transition: 0.2s;
+    transition-delay: 0.03s;
+    transform: translate(20%, 20%);
+    
+    opacity: 0.4;
+    background-image: url('../logo/garra.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+
+
+@media screen and (max-width: 944px) {
+    .card{
+        width: 200px;
+        height: 320px;
+    }
+
+    .cardDestaque{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .card{
+
+        width: 150px;
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 486px) {
+    .card{
+
+        width: 170px;
+        height: 320px;
+    }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Central</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet"      type="text/css" href="css/main-style.css">
+        <link rel="stylesheet"      type="text/css" href="css/normalize.css">
+        <meta name="viewport"       content="width=device-width, initial-scale=1.0">
+        <meta name="author"         content="autor do site">
+        <meta name="keywords"       content="palavras-separadas,por,virgula">
+        <meta name="description"    content="descrição do site">
+        <link rel="icon" type="image/png" href="logo/icon.png"/>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="#"><img src="logo/tiger.png" class="tigerLogo" alt="tiger-logo"></a>
+                <nav class="navbar">
+                    <ul>
+                        <a href="#"><li class="atualPage">Home</li></a>
+                        <a onclick="verificaLogin()" id="contaOuLog" class=""><li id="contaPage">Entrar</li></a>
+                        <a href="carrinho.html"><li style="font-size: 14px;">Carrinho</li></a>
+                    </ul>
+                </nav><!--navbar-->
+            </div><!-- container-->
+        </header>
+        <div class="central"><img src="logo/Central2.png" alt=""></div>
+        <section>
+            <div class="container">
+                <div id="GameList">
+                    <!-- ### -->
+                </div><!--GameList-->
+            </div><!--container-->
+        </section>
+        <!-- Script GameList -->
+        <script src="script/GameList.js"></script>
+        <!-- Script Geral -->
+        <script src="script/script.js"></script>
+        <!-- Script Card -->
+        <script src="script/card.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelector(".cardxyz"), {
+                max: 15, speed: 10000, glare: true, 'max-glare': 0.6});
+            VanillaTilt.init(document.querySelectorAll(".cardxyz"), {
+                max: 15, speed: 10000, glare: true, 'max-glare': 0.6});
+            VanillaTilt.init(document.querySelector(".cardDestaque"), {
+                max:  5, speed: 10000, glare: true, 'max-glare': 0.4});
+        </script>
+    </body>
+</html>
